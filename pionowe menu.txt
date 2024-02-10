@@ -1,0 +1,48 @@
+<div className="bg-blue-950">
+      <div className="h-16 px-8 flex items-center justify-between relative">
+        <p
+          className="text-white font-bold hover:text-orange-300 cursor-pointer text-2xl"
+          onClick={() => navigate('/')}
+        >
+          FHIR Application
+        </p>
+        <div className="flex space-x-4 items-center">
+          <p
+            className="text-white font-bold hover:text-orange-300 cursor-pointer"
+            onClick={toggleMenu}
+          >
+            Menu
+          </p>
+        </div>
+      </div>
+      <div
+        className={`bg-gray-800 w-52 p-2 absolute top-16 right-0 ${
+          isMenuOpen ? 'opacity-100' : 'opacity-0'
+        } transition-opacity duration-300 ease-in-out`}
+      >
+        <p
+          className="text-white font-bold hover:text-orange-300 cursor-pointer"
+          onClick={() => navigate('/viewPatients')}
+        >
+          View Patients
+        </p>
+        <p
+          className="text-white font-bold hover:text-orange-300 cursor-pointer"
+          onClick={() => navigate('/viewPractitioners')}
+        >
+          View Practitioners
+        </p>
+        <p
+          className="text-white font-bold hover:text-orange-300 cursor-pointer"
+          onClick={() => navigate('/registerPatient')}
+        >
+          Register Patient
+        </p>
+        <p
+          className="text-white font-bold hover:text-orange-300 cursor-pointer"
+          onClick={() => navigate('/registerPractitioner')}
+        >
+          Register Practitioner
+        </p>
+      </div>
+    </div>
